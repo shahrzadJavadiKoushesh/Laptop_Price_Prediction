@@ -12,8 +12,6 @@ binary = FirefoxBinary(r'C:\Program Files\Mozilla Firefox\firefox.exe')
 driver = webdriver.Firefox(firefox_binary=binary, executable_path=gecko + '.exe')
 driver.get("https://torob.com/search/?query=%D9%84%D9%BE%20%D8%AA%D8%A7%D9%BE")
 
-last_height = driver.execute_script("return document.body.scrollHeight")
-
 for i in range(120):
     driver.execute_script("window.scrollBy(0, -500);")
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
